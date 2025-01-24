@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PatientManagSys</string>
+    <string name="meeting_id_label">Meeting ID</string>
+    <string name="share_button">Share meeting ID</string>
+</resources>

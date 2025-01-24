@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">eu</span><span class="s2">.</span><span class="s1">tutorials</span><span class="s2">.</span><span class="s1">patientmanagsys</span>
+
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">annotation</span><span class="s2">.</span><span class="s1">SuppressLint</span>
+<span class="s1">import android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">ComponentActivity</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">setContent</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">foundation</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">fillMaxSize</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">material</span><span class="s2">.</span><span class="s1">MaterialTheme</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">material3</span><span class="s2">.</span><span class="s1">Surface</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">Modifier</span>
+<span class="s1">import androidx</span><span class="s2">.</span><span class="s1">navigation</span><span class="s2">.</span><span class="s1">compose</span><span class="s2">.</span><span class="s1">rememberNavController</span>
+<span class="s1">import com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">gms</span><span class="s2">.</span><span class="s1">location</span><span class="s2">.</span><span class="s1">FusedLocationProviderClient</span>
+<span class="s1">import com</span><span class="s2">.</span><span class="s1">google</span><span class="s2">.</span><span class="s1">android</span><span class="s2">.</span><span class="s1">gms</span><span class="s2">.</span><span class="s1">location</span><span class="s2">.</span><span class="s1">LocationServices</span>
+<span class="s1">import eu</span><span class="s2">.</span><span class="s1">tutorials</span><span class="s2">.</span><span class="s1">patientmanagsys</span><span class="s2">.</span><span class="s1">navigation</span><span class="s2">.</span><span class="s1">NavGraphSetup</span>
+<span class="s1">import eu</span><span class="s2">.</span><span class="s1">tutorials</span><span class="s2">.</span><span class="s1">patientmanagsys</span><span class="s2">.</span><span class="s1">ui</span><span class="s2">.</span><span class="s1">theme</span><span class="s2">.</span><span class="s1">PatientManagSysTheme</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : ComponentActivity</span><span class="s2">() {</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">fusedLocationClient: FusedLocationProviderClient</span>
+
+    <span class="s1">@SuppressLint</span><span class="s2">(</span><span class="s3">&quot;UnusedMaterial3ScaffoldPaddingParameter&quot;</span><span class="s2">)</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState: Bundle?</span><span class="s2">) {</span>
+       <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">)</span>
+        <span class="s1">fusedLocationClient </span><span class="s2">= </span><span class="s1">LocationServices</span><span class="s2">.</span><span class="s1">getFusedLocationProviderClient</span><span class="s2">(</span><span class="s0">this</span><span class="s2">)</span>
+        <span class="s1">setContent </span><span class="s2">{</span>
+            <span class="s1">PatientManagSysTheme </span><span class="s2">{</span>
+                    <span class="s0">val </span><span class="s1">navController </span><span class="s2">= </span><span class="s1">rememberNavController</span><span class="s2">()</span>
+                    <span class="s4">// A surface container using the 'background' color from the theme.</span>
+                    <span class="s1">Surface</span><span class="s2">(</span>
+                        <span class="s1">modifier </span><span class="s2">= </span><span class="s1">Modifier</span><span class="s2">.</span><span class="s1">fillMaxSize</span><span class="s2">(),</span>
+                        <span class="s1">color </span><span class="s2">= </span><span class="s1">MaterialTheme</span><span class="s2">.</span><span class="s1">colors</span><span class="s2">.</span><span class="s1">background</span>
+                    <span class="s2">) {</span>
+                       <span class="s1">NavGraphSetup</span><span class="s2">(</span><span class="s1">navController</span><span class="s2">,</span><span class="s1">fusedLocationClient</span><span class="s2">)</span>
+                    <span class="s2">}</span>
+                <span class="s2">}</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+
+</pre>
+</body>
+</html>
