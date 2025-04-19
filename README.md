@@ -58,4 +58,4 @@ A complete **Patient Management Android Application** built with **Kotlin + Jetp
 
 1. Clone the repository:
    ```bash
-   
+   https://github.com/dhananjayingole/PatientManagementSys.git
