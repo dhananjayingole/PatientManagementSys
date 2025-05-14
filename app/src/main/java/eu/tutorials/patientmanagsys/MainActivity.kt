@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import eu.tutorials.patientmanagsys.PatientLogin.SignupScreen
+import eu.tutorials.patientmanagsys.navigation.NavGraphSetup
 import eu.tutorials.patientmanagsys.ui.theme.PatientManagSysTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,13 +29,13 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-//                       NavGraphSetup(navController,fusedLocationClient)
-                        SignupScreen(
-                            onSignupComplete = {
-                                // Navigate to next screen after successful signup
-                                finish()
-                            }
-                        )
+                       NavGraphSetup(navController,fusedLocationClient)
+//                        SignupScreen(
+//                            onSignupComplete = {
+//                                // Navigate to next screen after successful signup
+//                                finish()
+//                            }
+//                        )
                     }
                 }
             }
