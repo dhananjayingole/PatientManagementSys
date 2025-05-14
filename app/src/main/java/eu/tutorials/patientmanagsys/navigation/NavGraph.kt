@@ -135,6 +135,14 @@ fun NavGraphSetup(navController: NavHostController, fusedLocationClient: FusedLo
                     videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                 )
             }
+            composable(Routes.MonoLoginScreen){
+                SignupScreen(
+                           onSignupComplete = {
+                               // Navigate to next screen after successful signup
+                               finish()
+                            }
+                    )
+            }
             composable(Routes.YogaScreen) {
                 showBottomBar = true
                 showTopBar = true
