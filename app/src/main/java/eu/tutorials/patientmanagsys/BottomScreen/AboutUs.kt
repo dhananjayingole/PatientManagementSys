@@ -109,7 +109,7 @@ fun AboutUsContent() {
                     context.startActivity(intent)
                 }
             ) {
-                Text(text = "Click me to give feedback",
+                Text(text = "Click here to give feedback",
                     color = Color.White, fontSize = 20.sp,
                     fontWeight = FontWeight.Bold)
             }
