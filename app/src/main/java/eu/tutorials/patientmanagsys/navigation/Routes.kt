@@ -14,4 +14,5 @@ object Routes {
     var YogaScreen = "yogascreen"
     var YogaDetailScreen = "yogadetailscreen/{poseId}"
     val UpdatePatientScreen = "update_patient_screen/{patientId}"
+    val MonoLoginScreen = "monologinscreen"
 }
