@@ -131,6 +131,7 @@ private fun OtpSection(viewModel: SignupViewModel) {
 
     Button(
         onClick = viewModel::verifyOtp,
+        navController.navigate(Routes.PatientListScreen)
         modifier = Modifier.fillMaxWidth(),
         enabled = !viewModel.isLoading && viewModel.otp.length == 6
     ) {
