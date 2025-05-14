@@ -13,6 +13,5 @@ object Routes {
     var EmergencyScreen = "emergencycallbutton"
     var YogaScreen = "yogascreen"
     var YogaDetailScreen = "yogadetailscreen/{poseId}"
-    var VideoCallScreen = "videocallingscreen"
-    var SplashScreen = "splashscreen"
+    val UpdatePatientScreen = "update_patient_screen/{patientId}"
 }

@@ -70,7 +70,7 @@ fun PatientListScreen(
     val filteredPatientList = if (searchQuery.isEmpty()) {
         patientList
     } else {
-        patientList.filter { it.name.contains(searchQuery, ignoreCase = true) }
+        patientList.filter { it.name.contains(searchQuery, ignoreCase = true) } //to ignore case sensitivity.
     }
 
     ModalBottomSheetLayout(
@@ -121,7 +121,9 @@ fun PatientListScreen(
                         patientItem(
                             patient = patient,
                             onItemClicked = {
-                                navController.navigate(Routes.PatientDetailScreen)
+                                navController.navigate(
+                                    route = "${Routes.UpdatePatientScreen}/${patient.id}"
+                                )
                             },
                             onDeleteConfirm = {
                                 viewModel.deletePatient(patient.id)

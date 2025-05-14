@@ -44,7 +44,7 @@ android {
         viewBinding = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.4"
     }
     packaging {
         resources {
@@ -55,7 +55,8 @@ android {
 
 dependencies {
 
-
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
+    implementation ("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.android.exoplayer:exoplayer-core:2.16.1")
     implementation("com.google.android.exoplayer:exoplayer-ui:2.16.1")
     implementation("com.google.android.exoplayer:exoplayer-hls:2.16.1")
@@ -121,7 +122,6 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata")
     // Coil for image loading
     implementation ("io.coil-kt:coil-compose:2.4.0")
-    implementation("com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:3.9.0")
 
     // Firebase Authentication
     implementation("com.google.firebase:firebase-auth-ktx:23.0.0") {

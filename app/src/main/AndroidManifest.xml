@@ -30,18 +30,9 @@
             </intent-filter>
         </activity>
 
-        <!-- Call Activity -->
-        <activity
-            android:name=".VideoCalling.CallActivity"
-            android:exported="true"
-            android:theme="@style/Theme.MyTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+<!--         Call Activity -->
 
-        <!-- Meta-data for WebLayer compatibility -->
+<!--         Meta-data for WebLayer compatibility -->
         <meta-data
             android:name="androidx.webkit.WebViewCompat.WEBLAYER_VERSION"
             android:value="113" />

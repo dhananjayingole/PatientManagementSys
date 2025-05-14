@@ -41,7 +41,7 @@ import eu.tutorials.patientmanagsys.R
 fun PatientDetailScreen(
     viewModel: PatientDetailsViewModel,
     onBackClick:() ->Unit,
-    navController: NavHostController,
+    navController: NavHostController
 ) {
 
     val state = viewModel.state

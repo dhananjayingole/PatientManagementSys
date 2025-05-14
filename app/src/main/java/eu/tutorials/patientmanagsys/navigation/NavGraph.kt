@@ -1,4 +1,3 @@
-
 package eu.tutorials.patientmanagsys.navigation
 
 import androidx.compose.foundation.layout.padding
@@ -44,7 +43,6 @@ fun NavGraphSetup(navController: NavHostController, fusedLocationClient: FusedLo
     var showBottomBar by remember { mutableStateOf(true) }
     var showTopBar by remember { mutableStateOf(true) }
     var screenTitle by remember { mutableStateOf("Patient Management") } // Default screen name
-
     val currentUser = FirebaseAuth.getInstance().currentUser
 
     fun isAdminUser(): Boolean {

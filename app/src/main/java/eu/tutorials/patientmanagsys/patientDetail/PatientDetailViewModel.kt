@@ -9,7 +9,6 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import eu.tutorials.patientmanagsys.model.Patient
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
 class PatientDetailsViewModel:ViewModel(){
